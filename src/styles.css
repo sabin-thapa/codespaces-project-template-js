@@ -30,13 +30,13 @@ section.dark {
 
 section.light {
   color: black;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.185);
   padding: 8rem 0;
 }
 
 section img.background {
   width: 100vmax;
-  height: 100%;
+  height: 140%;
   z-index: -1;
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@ p.large {
 }
 
 p.small {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 hr {

@@ -19,9 +19,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/portfolio.png";
 
-const imageAltText = "desktop with books and laptop";
+const imageAltText = "campus experts portfolio";
 
 /**
  * Project list
@@ -31,36 +31,34 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "GitHub Campus Expert 🚩",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "GitHub Campus Experts are student leaders that strive to build diverse and inclusive spaces to learn skills, share their experiences, and build projects together.",
+    url: "https://githubcampus.expert/sabin-thapa/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "IT Meet 2022 Event Lead Coordinator 🎉",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Coordinated with event managers by effectively communicating with them and regularly tracking the progress of around 20 events(Gaming, tech and non-tech).",
+    url: "https://kucc.ku.edu.np/wp-content/uploads/2022/08/IT%20Express%202022.pdf",
   },
   {
-    title: "My Resume Site",
+    title: "JavaScript Community Coordinator - KUCC",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Responsible for conducting workshops, meetups and talk sessions in the community related to JavaScript domain at Kathmandu University Computer Club. Information on Page 17 of the IT Express 2022",
+    url: "https://kucc.ku.edu.np/wp-content/uploads/2022/08/IT%20Express%202022.pdf",
   },
   {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+    title: "Mentor - KU Hackfest 2022",
+    description: "Responsible for mentoring the participants on ReactJS and GitHub.",
+    url: "https://www.kuhackfest.com/",
   },
 ];
 
 const Portfolio = () => {
   return (
     <section className="light" id="portfolio">
-      <h2>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
+      <div style={{ display: "flex", flexDirection: "row", paddingTop: "8rem" }}>
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
@@ -68,13 +66,15 @@ const Portfolio = () => {
             alt={imageAltText}
           />
         </div>
-        <div className="container">
+        <div className="container" style={{ paddingLeft: "6rem" }}>
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
+            <div className="box" key={project.title} style={{ background: "#F2F2F2" }}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                <h3 style={{ flexBasis: "40px", textDecoration: "underline" }}>{project.title}</h3>
               </a>
-              <p className="small">{project.description}</p>
+              <p className="small" style={{ fontColor: "#000" }}>
+                {project.description}
+              </p>
             </div>
           ))}
         </div>
